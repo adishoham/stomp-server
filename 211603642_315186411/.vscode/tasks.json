@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make StompWCIClient",
+            "command": "make",
+            "args": ["clean", "StompWCIClient"],
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "make EchoClient",
+            "command": "make",
+            "args": ["EchoClient"],
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "mvn compile",
+            "command": "mvn",
+            "args": ["compile"],
+            "options": {
+                "cwd": "${workspaceFolder}/server"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "mvn clean compile",
+            "command": "mvn",
+            "args": ["clean", "compile"],
+            "options": {
+                "cwd": "${workspaceFolder}/server"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "mvn package",
+            "command": "mvn",
+            "args": ["clean", "package"],
+            "options": {
+                "cwd": "${workspaceFolder}/server"
+            }
+        }
+    ]
+}
